@@ -108,15 +108,7 @@ for region in regions:
         roundness_list.append(rdn)
         sf_list.append(sf)
         
-        # if region.intensity_mean > 0.5 :
-        #     rect = mpatches.Rectangle((minc-1, minl-1), largura+1, altura+1, fill=False, edgecolor='red', linewidth=1)
-        # else:
-        #     rect = mpatches.Rectangle((minc-1, minl-1), largura+1, altura+1, fill=False, edgecolor='yellow', linewidth=1)
-        # ax.add_patch(rect)
-        
-        # print("Regiao = ", region.label, ' intensity mean :', region.intensity_mean, 'rdn :', rdn, 'sf :', sf)
 
-#print("roundness_mean =" , rdn_mean/count , 'sf_mean =' , sf_mean/count)
 print()
 print('# de regioes segmentadas consideradas nódulos =', count)
 print('# de regioes segmentadas totais =', len(regions))
@@ -128,48 +120,6 @@ plt.show()
 
 test = label_image >0
 #SALVA IMAGEM CONTENDO SOMENTE OS NÓDULOS CONSIDERADOS REDONDOS
-plt.imsave('kernelsize48_blocksize.jpg', test, cmap = 'gray')
+plt.imsave('eq_gauss_limiar_abertura_clearborder_diametro_final.jpg', test, cmap = 'gray')
 
-# # fig, ax = plt.subplots(1, 2)
-# # hist, hist_centers = histogram(np.array(sf_list), nbins = 20)
-# # # fig, ax = plt.subplots()
-# # ax[0].plot(hist_centers, hist)
-# # ax[0].set_title('hist SF todas regioes')
 
-# # hist, hist_centers = histogram(np.array(roundness_list), nbins = 20)
-# # # fig, ax = plt.subplots()
-# # ax[1].plot(hist_centers, hist)
-# # ax[1].set_title('hist roundnesstodas regioes')
-
-# arealist = arealist/max(arealist)
-
-# fig2, ax2 = plt.subplots(2, 2)
-# hist, hist_centers = histogram(np.array(arealist), nbins = 20)
-# ax2[0][0].plot(hist_centers, hist)
-# ax2[0][0].set_title('hist area regioes segmentadas')
-
-# hist, hist_centers = histogram(np.array(minlist), nbins = 20)
-# ax2[0][1].plot(hist_centers, hist)
-# ax2[0][1].set_title('hist min regioes segmentadas ')
-
-# hist, hist_centers = histogram(np.array(meanlist), nbins = 20)
-# ax2[1][0].plot(hist_centers, hist)
-# ax2[1][0].set_title('hist mean regioes segmentadas ')
-
-# hist, hist_centers = histogram(np.array(maxlist), nbins = 20)
-# ax2[1][1].plot(hist_centers, hist)
-# ax2[1][1].set_title('hist max regioes segmentadas ')
-
-# # limiares = threshold_multiotsu(np.array(pixel_list))
-# # regioes = np.digitize(image_eq, bins=limiares)
-
-# # fig, ax = plt.subplots()
-# # ax.hist(pixel_list, bins=1000)
-
-# # for limiar in limiares:
-# #     ax.axvline(limiar, color = 'r')
-# # plt.show()
-
-# # fig, ax = plt.subplots()
-# # ax.imshow(regioes, cmap='jet')
-# # plt.show()
