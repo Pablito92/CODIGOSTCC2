@@ -45,7 +45,7 @@ thresh = threshold_local(image_eq, block_size = 13, method = 'mean')
 # thresh = threshold_local(image_eq, 21, 'gaussian')
 
 binary = image_eq > thresh ; binary = 1 - img_as_float(binary)
-# plt.figure("image binary threshold local"); plt.imshow(binary, cmap='gray')
+plt.figure("image binary threshold local"); plt.imshow(binary, cmap='gray')
 plt.imsave('eq_gauss_limiar.jpg', binary, cmap='gray')
 
 binary = binary_opening(binary, disk(5))
