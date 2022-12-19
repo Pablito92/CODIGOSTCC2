@@ -3,7 +3,13 @@
 Created on Thu Oct 13 16:03:14 2022
 
 @author: pabli
+
+PARA CADA PASSO NO ALGORITMO UMA IMAGEM É GERADA, MOSTRADA E SALVA NO MESMO DIRETÓRIO DE EXECUÇÃO DESTE CÓDIGO.
+
+O ARQUIVO GERADO "eq_gauss_limiar.jpg" TEM UMA REGIÃO REPRESENTADA NA FIGURA 11 NO TEXTO DO TCC.
+NO CASO É REPRESENTADO O ANTES E O DEPOIS DA REGIÃO AO SER APLICADA UMA OPERAÇÃO MORFOLÓGICA DE ABERTURA.
 """
+
 from userlib import os, plt, io, figax
 from math import pi
 from matplotlib import image
